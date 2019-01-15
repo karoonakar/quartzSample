@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC 
+"-//log4j/log4j Configuration//EN" "log4j.dtd" >
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- console -->
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<param name="threshold" value="ALL" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="conversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c.%M:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- categories -->
+	<category name="com.javacodegeeks">
+		<priority value="INFO" />
+	</category>
+
+	<!-- root -->
+	<root>
+		<priority value="ERROR" />
+		<appender-ref ref="STDOUT" />
+	</root>
+</log4j:configuration>
